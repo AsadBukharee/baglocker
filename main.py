@@ -24,6 +24,6 @@ app.add_middleware(
 )
 app.mount("/static", StaticFiles(directory="static"), name="static")
 app.include_router(auth_route.router, prefix="")
-app.include_router(bl_route.router, prefix="/ig")
+app.include_router(bl_route.router, prefix="/bl")
 app.include_router(route_login.router, prefix="/login")
 app.include_router(route_users.router, prefix="/user")

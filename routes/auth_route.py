@@ -39,5 +39,6 @@ async def login(request: Request, db: Session = Depends(get_db)):
 
 @router.get("/")
 async def main(request: Request):
-    return templates.TemplateResponse("waiting.html", {"request": request})
+    locations = ["Rome","Milan","Florence","Venice","Naples","Bologna","Pisa","Siena","Palermo","Verona","Turin","Genoa","Bari","Catania","Madrid","Barcelona"]
+    return templates.TemplateResponse("index.html", {"request": request,'locations':locations})
 
