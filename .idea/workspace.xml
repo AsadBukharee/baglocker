@@ -5,92 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f135ab8-dd54-4b2b-87fc-140fd52bbbe9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/baglocker.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/_DataURI/data.0977392ae3f63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/_DataURI/data.0bf574f99815.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/_DataURI/data.10f724b26cb55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/_DataURI/data.8cf1a8846892e.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/_DataURI/data.9422d6d2f2071.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/_DataURI/data.a7c7417c8ea04.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/_DataURI/data.c530f25bbcc3b.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/_DataURI/data.e31b93091b491.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/_DataURI/data.f3b4d2bfba3a1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/cache/min/9/175225432c9eff44813010806d423b86.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/cache/min/9/ef9092593ef9b0fcdf3baa66e086f6e5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/plugins/goodlayers-core/plugins/gdlr-custom-icon/fonts/gdl-custom-set.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/plugins/goodlayers-core/plugins/simpleline/Simple-Line-Icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/plugins/wp-google-map-plugin/assets/css/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/plugins/wp-google-map-plugin/assets/js/maps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2020/10/aaron-huber-401200-unsplash-1000x670.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2020/10/aaron-huber-401200-unsplash-700x990.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2020/10/kelsey-roenau-608583-unsplash-1000x670.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2020/10/kelsey-roenau-608583-unsplash-700x990.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2020/10/kirill-zakharov-630681-unsplash-scaled-1000x670.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2020/10/roan-lavery-sEcYfPfKOhw-unsplash-700x990.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2020/10/roberto-nickson-emqnSQwQQDo-unsplash-scaled-780x595.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2020/10/shop-slo-vhztm9QC0L0-unsplash-700x990.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2020/10/shop-slo-vhztm9QC0L0-unsplash-780x595.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2020/10/shutterstock_307470824-700x990.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2020/10/shutterstock_560973166-700x990.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/bg-testimonail.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/customer02-150x150.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/customer03-150x150.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/customer1-150x150.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/logo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/logo3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/logo4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/logo5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/logo6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/pascal-diekmann-707233-unsplash-700x990.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/pexels-photo-25284-700x990.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2021/12/pexels-photo-871053-700x990.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/andrew-neel-T0eb55DxDN4-unsplash-1000x670.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/andrew-neel-T0eb55DxDN4-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/apartment-2-hero-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/apartment-2-number-img-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/apartment-2-number-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/apartment2-blog-bg-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/apartment2-blog-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/apartment2-col-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/apartment2-col-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/apartment2-col-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/apartment2-column-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/apartment2-gallery-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/apartment2-testimonial-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/patrick-perkins-3wylDrjxH-E-unsplash-1000x670.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/trent-szmolnik-1271248-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/01/tu-tu-322210-unsplash-1000x670.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/02/collov-home-design-LSpkE5OCD_8-unsplash-780x595.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/02/francesca-tosolini-tHkJAMcO3QE-unsplash-780x595.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/02/isaac-martin-wH2aFGo-Rt0-unsplash-780x595.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/02/jason-briscoe-T0La6F_WrE-unsplash-1-780x595.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/02/luke-van-zyl-koH7IVuwRLw-unsplash-780x595.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/02/resort2-img-780x595.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/02/sidekix-media-1vMz2_MclrM-unsplash-780x595.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-content/uploads/sites/9/2022/05/apartment2-logox2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/apartment2/wp-includes/js/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/resort/wp-content/uploads/omgf/gdlr-core-google-font/amiri-normal-latin-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/a6e8z9v6.stackpathcdn.com/hotale/resort/wp-content/uploads/omgf/gdlr-core-google-font/jost-normal-latin.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/demo.goodlayers.com.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/demo.goodlayers.com/hotale/apartment2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/maps.google.com/maps-api-v3/api/js/53/4a/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/maps.google.com/maps-api-v3/api/js/53/4a/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/maps.google.com/maps/api/js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Theme/www.paypal.com/sdk/js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baglocker.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth_route.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth_route.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/21_12_2022_10_06_39.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +83,7 @@
       <workItem from="1684950848222" duration="1684000" />
       <workItem from="1685119468093" duration="5143000" />
       <workItem from="1685442555280" duration="2403000" />
-      <workItem from="1685531845988" duration="5389000" />
+      <workItem from="1685531845988" duration="9347000" />
     </task>
     <servers />
   </component>
@@ -226,6 +142,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/baglocker$core.coverage" NAME="core Coverage Results" MODIFIED="1685444978477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bag_locker$Main.coverage" NAME="Main Coverage Results" MODIFIED="1684691814545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/baglocker$Main.coverage" NAME="Main Coverage Results" MODIFIED="1685538535206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/baglocker$Main.coverage" NAME="Main Coverage Results" MODIFIED="1685542943362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
