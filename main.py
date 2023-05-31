@@ -5,19 +5,14 @@ from starlette.middleware.cors import CORSMiddleware
 from database import engine
 from fastapi.staticfiles import StaticFiles
 
-origins = [
-    "http://localhost",
-    "http://localhost:8000",
-    "http://localhost:8080",
-    "*"
-]
+origins = ["*"]
 
 insta.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
