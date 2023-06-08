@@ -37,7 +37,15 @@ async def login(request: Request, db: Session = Depends(get_db)):
     return templates.TemplateResponse("auth/login.html", form.__dict__)
 
 
-@router.get("/")
-async def main(request: Request):
-    return templates.TemplateResponse("waiting.html", {"request": request})
+# @router.get("/")
+# async def main(request: Request):
+#     return templates.TemplateResponse("waiting.html", {"request": request})
 
+@router.get("/")
+async def index(request:Request):
+    return templates.TemplateResponse("base.html",{"request":request})
+
+
+@router.get("/map")
+async def index(request:Request):
+    return templates.TemplateResponse("map.html",{"request":request})
