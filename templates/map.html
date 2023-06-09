@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Elements Example</title>
+  <link
+        href="{{url_for('static',path='/css/app.css')}}"
+        rel="stylesheet"
+    />
+</head>
+
+<body class="flex flex-col h-screen">
+  <div class="flex-grow">
+    <!-- Your page content here -->
+  </div>
+
+  <!-- Bottom right corner container -->
+  <div class="fixed right-4 bottom-4 flex flex-col space-y-4">
+    <!-- Location search box -->
+    <div class="bg-white p-4 rounded-lg shadow-md">
+      <input type="text" placeholder="Search location" class="w-64 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <!-- You can customize the appearance of the search box further as per your needs -->
+    </div>
+
+    <!-- Zoom options -->
+    <div class="bg-white p-4 rounded-lg shadow-md">
+      <button class="w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500">
+        -
+      </button>
+      <!-- You can add additional zoom options or customize the appearance as per your needs -->
+      <button class="w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500">
+        +
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>

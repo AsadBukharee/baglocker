@@ -1,4 +1,4 @@
-# Dennis Ivy FastAPI CRUD App
+# App
 This is a simple app designed to play around with FastAPI with a basic CRUD app.
 The article accompanying the app can be found at https://medium.com/@dennisivy/my-first-crud-app-with-fast-api-74ac190d2dcc and the livestreamed video can be seen at https://www.youtube.com/watch?v=FOZNYBu8u18.
 
@@ -17,6 +17,9 @@ env\Scripts\activate
 source env/bin/activate
 ```
 
+
+
+
 Once the virtual environment is activated simply run `pip install -r requirements.txt`
 
 ## Run the app
@@ -32,3 +35,14 @@ uvicorn main:app --reload --port <PORT>
 ```
 where the `<PORT>` is a number of your choosing.
 For the rest of the options when running a uvicorn app, visit https://www.uvicorn.org/#command-line-options.
+
+
+# Tailwind-elements
+
+npm install -D tailwindcss postcss autoprefixer
+### not required to initialize
+`npx tailwindcss init -p`
+
+
+npx tailwindcss -i ./styles/app.css -o ../static/css/app.css --watch
+
