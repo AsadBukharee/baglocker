@@ -42,15 +42,21 @@ async def login(request: Request, db: Session = Depends(get_db)):
 #     return templates.TemplateResponse("waiting.html", {"request": request})
 
 @router.get("/")
+async def index(request: Request):
+    return templates.TemplateResponse("base.html", {"request": request})
 
-async def index(request:Request):
-    return templates.TemplateResponse("base.html",{"request":request})
-
-async def main(request: Request):
-    locations = ["Rome","Milan","Florence","Venice","Naples","Bologna","Pisa","Siena","Palermo","Verona","Turin","Genoa","Bari","Catania","Madrid","Barcelona"]
-    return templates.TemplateResponse("index.html", {"request": request,'locations':locations})
+#
+# async def main(request: Request):
+#     locations = ["Rome", "Milan", "Florence", "Venice", "Naples", "Bologna", "Pisa", "Siena", "Palermo", "Verona",
+#                  "Turin", "Genoa", "Bari", "Catania", "Madrid", "Barcelona"]
+#     return templates.TemplateResponse("index.html", {"request": request, 'locations': locations})
 
 
 @router.get("/map")
-async def index(request:Request):
-    return templates.TemplateResponse("map.html",{"request":request})
+async def index(request: Request):
+    return templates.TemplateResponse("map.html", {"request": request})
+
+
+@router.get("/available-lockers")
+async def available_lockers(request: Request):
+    return {"data": [(33.634283, 73.054358), (33.640320, 73.063402), (33.654302, 73.081956)]}

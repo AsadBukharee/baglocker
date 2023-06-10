@@ -1,17 +1,20 @@
 from fastapi import FastAPI, Request
-from routes import bl_route, auth_route, route_login, route_users
+# from routes import bl_route, auth_route, route_login, route_users
 from models import insta
 from starlette.middleware.cors import CORSMiddleware
 from database import engine
 from fastapi.staticfiles import StaticFiles
 
 from fastapi.middleware.gzip import GZipMiddleware
+
+from routes import auth_route, bl_route, route_login, route_users
+
 origins = [
     "http://localhost",
     "http://localhost:8000",
     "http://localhost:8080",
     "*"
-
+    ]
 
 origins = ["*"]
 

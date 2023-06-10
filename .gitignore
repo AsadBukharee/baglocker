@@ -1,3 +1,6 @@
 /venv/
 /REQUIREMENTS/
 /Theme/*
+/tailwindcss/
+/tailwindcss/*
+.idea

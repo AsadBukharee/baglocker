@@ -1,40 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Elements Quick Start</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind Elements Example</title>
-  <link
-        href="{{url_for('static',path='/css/app.css')}}"
-        rel="stylesheet"
-    />
-</head>
+    <!-- Roboto font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
 
-<body class="flex flex-col h-screen">
-  <div class="flex-grow">
-    <!-- Your page content here -->
-  </div>
+    <!-- Tailwind Elements styles-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css">
+      <style>
+        #map {
+          position: relative;
+          z-index: 0;
+        }
+    
+        .map-controls {
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          z-index: 1;
+          background-color: rgba(255, 255, 255, 0.8);
+          padding: 8px;
+          border-radius: 4px;
+        }
+      </style>
 
-  <!-- Bottom right corner container -->
-  <div class="fixed right-4 bottom-4 flex flex-col space-y-4">
-    <!-- Location search box -->
-    <div class="bg-white p-4 rounded-lg shadow-md">
-      <input type="text" placeholder="Search location" class="w-64 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-      <!-- You can customize the appearance of the search box further as per your needs -->
-    </div>
 
-    <!-- Zoom options -->
-    <div class="bg-white p-4 rounded-lg shadow-md">
-      <button class="w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500">
-        -
+    <!-- Tailwind CSS config -->
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            body: ["Roboto", "sans-serif"],
+            mono: ["ui-monospace", "monospace"],
+          },
+        },
+        corePlugins: {
+          preflight: false,
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <div id="map" class="h-screen"></div>
+    <div class="absolute top-5 left-5 z-10">
+      <input id="search" type="text" placeholder="Search for a location" class="px-4 py-2 border border-gray-300 rounded-lg">
+      <button id="locateButton" class="ml-2 px-4 py-2 border border-gray-300 rounded-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="16" x2="12" y2="12" />
+          <line x1="12" y1="8" x2="12" y2="8" />
+          <line x1="20" y1="12" x2="16" y2="12" />
+          <line x1="8" y1="12" x2="4" y2="12" />
+        </svg>
       </button>
-      <!-- You can add additional zoom options or customize the appearance as per your needs -->
-      <button class="w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500">
-        +
-      </button>
+      <button id="directionsButton" class="ml-2 px-4 py-2 border border-gray-300 rounded-lg">Get Directions</button>
+      <button id="findLockersButton" class="ml-2 px-4 py-2 border border-gray-300 rounded-lg">Find Lockers</button>
     </div>
-  </div>
-</body>
+    
 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Tailwind Elements JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+    <script>
+
+            // Initialize the Leaflet map
+      const map = L.map('map').setView([51.505, -0.09], 13);
+      const markers = [];
+      let my_location; // Define my_location in a broader scope
+
+      map.locate({ setView: true, maxZoom: 15 });
+      map.on('locationfound', (e) => {
+        const { lat, lng } = e.latlng;
+        my_location = L.latLng(lat, lng); // Assign value to my_location
+      });
+      
+
+      // Function to handle marker click event
+      function onMarkerClick(marker) {
+      if (!my_location) {
+        return; // Return if my_location is not defined
+      }
+
+      const { lat, lng } = marker.getLatLng();
+      const destination = L.latLng(lat, lng);
+      const polyline = L.polyline([my_location, destination]).addTo(map);
+      alert(`Marker Clicked\nmy_location: ${my_location}\ndestination: ${destination}`);
+      map.fitBounds(polyline.getBounds());
+    }
+
+      // Create a TileLayer using OSM as the base map
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Handle location search
+      const searchInput = document.getElementById('search');
+
+      // Create a Leaflet Control Geocoder instance
+      const geocoder = L.Control.geocoder({
+      defaultMarkGeocode: false,
+      placeholder: 'Search for a location',
+      collapsed: false
+      }).on('markgeocode', function (e) {
+      const { center } = e.geocode;
+      map.setView(center, 13);
+      }).addTo(map);
+
+      // Customize the search input using Tailwind CSS classes
+      searchInput.classList.add('px-4', 'py-2', 'border', 'border-gray-300', 'rounded-lg');
+
+      // Add the search control to the map
+      const searchContainer = document.querySelector('.leaflet-control-geocoder');
+      searchContainer.classList.add('absolute', 'top-5', 'left-5', 'z-10');
+
+      // Handle locate button click
+      const locateButton = document.getElementById('locateButton');
+      locateButton.addEventListener('click', () => {
+      map.locate({ setView: true, maxZoom: 15 });
+      });
+
+      // When the user's location is found, create a marker at that location
+      map.on('locationfound', (e) => {
+      const { lat, lng } = e.latlng;
+      L.marker([lat, lng]).addTo(map);
+      });
+
+      // When the user's location is not found or is denied, show an error message
+      map.on('locationerror', (e) => {
+      alert('Unable to retrieve your location. Please ensure location services are enabled.');
+      });
+
+      // Handle directions button click
+      // const directionsButton = document.getElementById('directionsButton');
+      // directionsButton.addEventListener('click', () => {
+      //   // Get the user's current location
+      //   map.locate({ setView: false, maxZoom: 15 });
+
+      //   // When the user's location is found, calculate and display the route
+      //   map.on('locationfound', (e) => {
+      //     const { lat, lng } = e.latlng;
+      //     const destination = L.latLng(51.505, -0.09); // Replace with the coordinates of your selected marker
+
+      //     // Create a polyline between the user's location and the destination
+      //     const polyline = L.polyline([L.latLng(lat, lng), destination]).addTo(map);
+
+      //     // Fit the map view to the bounds of the polyline
+      //     map.fitBounds(polyline.getBounds());
+      //   });
+      // });
+
+      // Handle find lockers button click
+      const findLockersButton = document.getElementById('findLockersButton');
+      // findLockersButton.textContent = 'Find Lockers';
+      // findLockersButton.classList.add('ml-2', 'px-4', 'py-2', 'border', 'border-gray-300', 'rounded-lg');
+      // document.querySelector('.map-controls').appendChild(findLockersButton);
+
+      findLockersButton.addEventListener('click', async () => {
+  try {
+    // Make an API request to fetch available lockers
+    const response = await fetch('http://localhost:8000/available-lockers');
+    const jresponse = await response.json();
+    const availableLockers = await jresponse.data;
+    
+    if (availableLockers.length === 0) {
+      // If no lockers are found, show an alert
+      alert('No Lockers found');
+    } else {
+      // If lockers are available, display the markers on the map
+      availableLockers.forEach(([lat, lon]) => {
+        const markerIcon = L.icon({
+          iconUrl: 'marker.png',
+          iconSize: [32, 32],
+          iconAnchor: [16, 32]
+        });
+
+        const marker = L.marker([lat, lon], { icon: markerIcon }).addTo(map);
+        marker.on('click', () => onMarkerClick(marker));
+        markers.push(marker)
+      });
+    }
+  } catch (error) {
+    console.error('Error fetching available lockers:', error);
+  }
+});
+
+    </script>
+  </body>
 </html>
