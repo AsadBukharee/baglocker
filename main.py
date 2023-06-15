@@ -1,4 +1,8 @@
+import os.path
+
 from fastapi import FastAPI, Request
+from starlette.responses import FileResponse
+
 # from routes import bl_route, auth_route, route_login, route_users
 from models import insta
 from starlette.middleware.cors import CORSMiddleware
@@ -36,3 +40,12 @@ app.include_router(auth_route.router, prefix="")
 app.include_router(bl_route.router, prefix="/bl")
 app.include_router(route_login.router, prefix="/login")
 app.include_router(route_users.router, prefix="/user")
+
+@app.get("/marker")
+async def get_image():
+    os.path.curdir
+    image_path = f"static/marker.png"  # Replace with the path to your image file
+    return FileResponse(image_path, media_type="image/jpeg")
+
+
+

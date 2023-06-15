@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bag Lockers</title>
+    <title>Tailwind Elements Quick Start</title>
 
     <!-- Roboto font -->
     <link
@@ -15,10 +15,6 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
-      <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-      <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css">
-
-
 
     <!-- Tailwind CSS config -->
     <script src="https://cdn.tailwindcss.com/3.3.0"></script>
@@ -265,23 +261,16 @@
         <div class="mx-auto w-full items-center justify-between px-3 text-orange-500 mt-[100px] lg:mt-[60px] lg:container" style="background-color: rgba(255, 255, 255, 0.2);">
         <div>
             <div class="container">
-                <div  id="map" class="h-screen lg:h-[500px] z-0 text-red-200" style="margin-top: 100px;"></div>
-                <div class="absolute top-10  z-10" style="margin: 80px;">
-                  <input id="search" type="text" placeholder="Search for a location" class="px-4 py-2 border border-gray-300 rounded-lg">
-                  <button id="locateButton" class="ml-2 px-2 py-1 border text-red-600 border-gray-700 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" ">
-                      <circle cx="12" cy="12" r="10" />
-                      <line x1="12" y1="16" x2="12" y2="12" />
-                      <line x1="12" y1="8" x2="12" y2="8" />
-                      <line x1="20" y1="12" x2="16" y2="12" />
-                      <line x1="8" y1="12" x2="4" y2="12" />
-                    </svg>
-                  </button>
-                  <button id="directionsButton" class="ml-2 px-4 py-2 border text-red-600 border-gray-700 rounded-lg">Get Directions</button>
-                  <button id="findLockersButton" class="ml-2 px-4 py-2 border text-red-600 border-gray-700 rounded-lg">Find Lockers</button>
-        </div>
+                <iframe class="container mx-auto rounded-lg bg-white text-center shadow-lg dark:bg-neutral-700 xs:h-[700px] xs:w-auto sm:h-[700px] sm:w-auto lg:h-[500px] lg:w-[80%]"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=12.415387630462646%2C43.078731223858746%2C12.442123889923096%2C43.09322705606336&amp;layer=mapnik"
+                    style="border: 1px solid black">
 
-            </div>
+
+
+
+            </iframe>
+
+                </div>
 
         </div>
 
@@ -317,44 +306,71 @@
 
                        <div class="flex justify-center space-x-20">
 
-                         <section class="text-gray-600 body-font overflow-hidden">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="lg:w-4/5 mx-auto flex flex-wrap">
-      <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-        <h2 class="text-sm title-font text-gray-500 tracking-widest">SELECTED LOCKER</h2>
-        <h1 class="text-gray-900 text-3xl title-font font-medium mb-4">You can select your lockers here.</h1>
-        <div class="flex mb-4">
-          <a class="flex-grow text-yellow-500 border-b-2 border-yellow-500 py-2 text-lg px-1">Description</a>
-          <a class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">Reviews</a>
-          <a class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">Details</a>
-        </div>
-        <p class="leading-relaxed mb-4">Here is the description of the locker that best suits your neds , we do have other options</p>
-        <div class="flex border-t border-gray-200 py-2">
-          <span class="text-gray-500">Color</span>
-          <span class="ml-auto text-gray-900">Blue</span>
-        </div>
-        <div class="flex border-t border-gray-200 py-2">
-          <span class="text-gray-500">Size</span>
-          <span class="ml-auto text-gray-900">Medium</span>
-        </div>
-        <div class="flex border-t border-b mb-6 border-gray-200 py-2">
-          <span class="text-gray-500">Quantity</span>
-          <span class="ml-auto text-gray-900">4</span>
-        </div>
-        <div class="flex">
-          <span class="title-font font-medium text-2xl text-gray-900">$58.00</span>
-          <button class="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">Button</button>
-          <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ url_for('static', path='luggage_storage.jpg') }}">
-    </div>
-  </div>
-</section>
+                           <div>
+                           <h3>FROM</h3>
+                           <!-- Date picker-->
+                           <div
+                              class="relative mb-3"
+                              data-te-datepicker-init
+                              data-te-input-wrapper-init>
+                              <input
+                                type="text"
+                                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                placeholder="Select a date" />
+                              <label
+                                for="floatingInput"
+                                class="pointer-events-none absolute top-0 left-3 mb-0 truncate text-neutral-500 motion-reduce:transition-none transition-all duration-200 ease-out max-w-[90%] origin-[0_0] pt-[0.37rem] leading-[1.6] peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary dark:peer-focus:text-primary dark:text-neutral-200 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8]"
+                                >Select a date</label
+                              >
+                            </div>
+                           <br>
+                           <!--Time Picker -->
+                           <div class="relative" data-te-timepicker-init data-te-input-wrapper-init>
+  <input
+    type="text"
+    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+    id="form1" />
+  <label
+    for="form1"
+    class="pointer-events-none absolute top-0 left-3 mb-0 truncate text-neutral-500 motion-reduce:transition-none transition-all duration-200 ease-out max-w-[90%] origin-[0_0] pt-[0.37rem] leading-[1.6] peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary dark:peer-focus:text-primary dark:text-neutral-200 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8]"
+    >Select a time</label
+  >
+</div>
+
+                        </div>
+
+                       <div>
+                           <h3>TO</h3>
+                           <!-- Date picker-->
+                           <div
+                              class="relative mb-3"
+                              data-te-datepicker-init
+                              data-te-input-wrapper-init>
+                              <input
+                                type="text"
+                                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                placeholder="Select a date" />
+                              <label
+                                for="floatingInput"
+                                class="pointer-events-none absolute top-0 left-3 mb-0 truncate text-neutral-500 motion-reduce:transition-none transition-all duration-200 ease-out max-w-[90%] origin-[0_0] pt-[0.37rem] leading-[1.6] peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary dark:peer-focus:text-primary dark:text-neutral-200 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8]"
+                                >Select a date</label
+                              >
+                            </div>
+                           <br>
+                           <!--Time Picker -->
+                           <div class="relative" data-te-timepicker-init data-te-input-wrapper-init>
+  <input
+    type="text"
+    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+    id="form1" />
+  <label
+    for="form1"
+    class="pointer-events-none absolute top-0 left-3 mb-0 truncate text-neutral-500 motion-reduce:transition-none transition-all duration-200 ease-out max-w-[90%] origin-[0_0] pt-[0.37rem] leading-[1.6] peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary dark:peer-focus:text-primary dark:text-neutral-200 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8]"
+    >Select a time</label
+  >
+</div>
+
+                        </div>
 
                        </div>
 
@@ -808,172 +824,10 @@
     <!--Footer-->
 
     <!-- Main js file -->
-
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     <script type="module" src="src/js/index.js"></script>
 
 
-<!--    <script type="text/javascript"></script>-->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <!-- Tailwind Elements JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
-    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-
-    <script>
-
-            // Initialize the Leaflet map
-      const map = L.map('map').setView([51.505, -0.09], 13);
-      const markers = [];
-      let my_location; // Define my_location in a broader scope
-
-      map.locate({ setView: true, maxZoom: 15 });
-      map.on('locationfound', (e) => {
-        const { lat, lng } = e.latlng;
-        my_location = L.latLng(lat, lng); // Assign value to my_location
-      });
-
-
-      // Function to handle marker click event
-      function onMarkerClick(marker) {
-  if (!my_location) {
-    return; // Return if my_location is not defined
-  }
-
-  const { lat, lng } = marker.getLatLng();
-  const destination = L.latLng(lat, lng);
-
-  // Create the request URL for the OpenRouteService API
-  const apiKey = '5b3ce3597851110001cf6248f6ca0a2c6e064576884807ad207023d4';
-  const requestURL = `https://api.openrouteservice.org/v2/directions/driving-car?api_key=${apiKey}&start=${my_location.lng},${my_location.lat}&end=${destination.lng},${destination.lat}`;
-
-  axios
-    .get(requestURL)
-    .then((response) => {
-      // Extract the route coordinates from the response
-      const routeCoordinates = response.data.features[0].geometry.coordinates;
-
-      // Convert the coordinates to Leaflet LatLng objects
-      const routeLatLngs = routeCoordinates.map((coord) => L.latLng(coord[1], coord[0]));
-
-      // Create a Polyline using the route coordinates
-      const routePolyline = L.polyline(routeLatLngs, { color: 'red' }).addTo(map);
-
-      // Fit the map view to the bounds of the route polyline
-      map.fitBounds(routePolyline.getBounds());
-
-      // Display the total distance and duration of the route
-      const summary = response.data.features[0].properties.summary;
-      const distance = summary.distance;
-      const duration = summary.duration;
-      alert(`Route Information:\nDistance: ${distance} meters\nDuration: ${duration} seconds`);
-    })
-    .catch((error) => {
-      console.error('Error fetching directions:', error);
-    });
-}
-
-
-      // Create a TileLayer using OSM as the base map
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-      }).addTo(map);
-
-      // Handle location search
-      const searchInput = document.getElementById('search');
-
-      // Create a Leaflet Control Geocoder instance
-      const geocoder = L.Control.geocoder({
-      defaultMarkGeocode: false,
-      placeholder: 'Search for a location',
-      collapsed: false
-      }).on('markgeocode', function (e) {
-      const { center } = e.geocode;
-      map.setView(center, 13);
-      }).addTo(map);
-
-      // Customize the search input using Tailwind CSS classes
-      searchInput.classList.add('px-4', 'py-2', 'border', 'border-gray-300', 'rounded-lg');
-
-      // Add the search control to the map
-      const searchContainer = document.querySelector('.leaflet-control-geocoder');
-      searchContainer.classList.add('absolute', 'top-5', 'left-5', 'z-10');
-
-      // Handle locate button click
-      const locateButton = document.getElementById('locateButton');
-      locateButton.addEventListener('click', () => {
-      map.locate({ setView: true, maxZoom: 15 });
-      });
-
-      // When the user's location is found, create a marker at that location
-      map.on('locationfound', (e) => {
-      const { lat, lng } = e.latlng;
-      L.marker([lat, lng]).addTo(map);
-      });
-
-      // When the user's location is not found or is denied, show an error message
-      map.on('locationerror', (e) => {
-      alert('Unable to retrieve your location. Please ensure location services are enabled.');
-      });
-
-      // Handle directions button click
-      // const directionsButton = document.getElementById('directionsButton');
-      // directionsButton.addEventListener('click', () => {
-      //   // Get the user's current location
-      //   map.locate({ setView: false, maxZoom: 15 });
-
-      //   // When the user's location is found, calculate and display the route
-      //   map.on('locationfound', (e) => {
-      //     const { lat, lng } = e.latlng;
-      //     const destination = L.latLng(51.505, -0.09); // Replace with the coordinates of your selected marker
-
-      //     // Create a polyline between the user's location and the destination
-      //     const polyline = L.polyline([L.latLng(lat, lng), destination]).addTo(map);
-
-      //     // Fit the map view to the bounds of the polyline
-      //     map.fitBounds(polyline.getBounds());
-      //   });
-      // });
-
-      // Handle find lockers button click
-      const findLockersButton = document.getElementById('findLockersButton');
-      // findLockersButton.textContent = 'Find Lockers';
-      // findLockersButton.classList.add('ml-2', 'px-4', 'py-2', 'border', 'border-gray-300', 'rounded-lg');
-      // document.querySelector('.map-controls').appendChild(findLockersButton);
-
-      findLockersButton.addEventListener('click', async () => {
-  try {
-    // Make an API request to fetch available lockers
-    const response = await fetch('http://localhost:8000/available-lockers');
-    const jresponse = await response.json();
-    const availableLockers = await jresponse.data;
-
-    if (availableLockers.length === 0) {
-      // If no lockers are found, show an alert
-      alert('No Lockers found');
-    } else {
-        const markerBounds = L.latLngBounds();
-      // If lockers are available, display the markers on the map
-      availableLockers.forEach(([lat, lon]) => {
-        const markerIcon = L.icon({
-          iconUrl: 'http://127.0.0.1:8000/marker',
-          iconSize: [32, 32],
-          iconAnchor: [16, 32]
-        });
-
-        const marker = L.marker([lat, lon], { icon: markerIcon }).addTo(map);
-        const markerLatLng = L.latLng(lat, lon);
-        markerBounds.extend(markerLatLng);
-        marker.on('click', () => onMarkerClick(marker));
-        markers.push(marker)
-      });
-      map.fitBounds(markerBounds);
-    }
-  } catch (error) {
-    console.error('Error fetching available lockers:', error);
-  }
-});
-
-    </script>
+    <script type="text/javascript"></script>
   </body>
 </html>

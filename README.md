@@ -20,6 +20,25 @@ source env/bin/activate
 
 
 
+
+walking client : No Online access
+
+Online access  : No Pending
+
+Language:
+
+
+
+
+
+
+
+
+
+
+
+
+
 Once the virtual environment is activated simply run `pip install -r requirements.txt`
 
 ## Run the app

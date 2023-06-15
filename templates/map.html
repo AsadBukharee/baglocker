@@ -92,16 +92,43 @@
 
       // Function to handle marker click event
       function onMarkerClick(marker) {
-      if (!my_location) {
-        return; // Return if my_location is not defined
-      }
+  if (!my_location) {
+    return; // Return if my_location is not defined
+  }
 
-      const { lat, lng } = marker.getLatLng();
-      const destination = L.latLng(lat, lng);
-      const polyline = L.polyline([my_location, destination]).addTo(map);
-      alert(`Marker Clicked\nmy_location: ${my_location}\ndestination: ${destination}`);
-      map.fitBounds(polyline.getBounds());
-    }
+  const { lat, lng } = marker.getLatLng();
+  const destination = L.latLng(lat, lng);
+
+  // Create the request URL for the OpenRouteService API
+  const apiKey = '5b3ce3597851110001cf6248f6ca0a2c6e064576884807ad207023d4';
+  const requestURL = `https://api.openrouteservice.org/v2/directions/driving-car?api_key=${apiKey}&start=${my_location.lng},${my_location.lat}&end=${destination.lng},${destination.lat}`;
+
+  axios
+    .get(requestURL)
+    .then((response) => {
+      // Extract the route coordinates from the response
+      const routeCoordinates = response.data.features[0].geometry.coordinates;
+
+      // Convert the coordinates to Leaflet LatLng objects
+      const routeLatLngs = routeCoordinates.map((coord) => L.latLng(coord[1], coord[0]));
+
+      // Create a Polyline using the route coordinates
+      const routePolyline = L.polyline(routeLatLngs).addTo(map);
+
+      // Fit the map view to the bounds of the route polyline
+      map.fitBounds(routePolyline.getBounds());
+
+      // Display the total distance and duration of the route
+      const summary = response.data.features[0].properties.summary;
+      const distance = summary.distance;
+      const duration = summary.duration;
+      alert(`Route Information:\nDistance: ${distance} meters\nDuration: ${duration} seconds`);
+    })
+    .catch((error) => {
+      console.error('Error fetching directions:', error);
+    });
+}
+
 
       // Create a TileLayer using OSM as the base map
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

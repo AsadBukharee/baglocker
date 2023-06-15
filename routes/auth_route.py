@@ -5,7 +5,7 @@ from fastapi import HTTPException
 from fastapi import Request
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
-from starlette.responses import HTMLResponse
+from starlette.responses import HTMLResponse, FileResponse
 
 from database import get_db
 from forms.login_form import LoginForm
@@ -14,10 +14,10 @@ from routes.route_login import login_for_access_token
 templates = Jinja2Templates(directory="templates")
 router = APIRouter(include_in_schema=False, tags=["Auth Activity"])
 
-
-@router.get("/login/")
-def login(request: Request):
-    return templates.TemplateResponse("auth/login.html", {"request": request})
+#
+# @router.get("/login/")
+# def login(request: Request):
+#     return templates.TemplateResponse("auth/login.html", {"request": request})
 
 
 @router.post("/login/")
@@ -60,3 +60,4 @@ async def index(request: Request):
 @router.get("/available-lockers")
 async def available_lockers(request: Request):
     return {"data": [(33.634283, 73.054358), (33.640320, 73.063402), (33.654302, 73.081956)]}
+
